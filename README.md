@@ -18,7 +18,7 @@ git clone https://github.com/Kill3rKai/CreatorLinks.git
 
 or download this repo by clicking on the "Code" button on the top right above commits
 
-or if you're lazy... heres a live server... [CreatorLinks]()
+or if you're lazy... heres a live server... [CreatorLinks](https://kill3rkai.github.io/CreatorLinks/)
 
 ```
 creatorlinks/
