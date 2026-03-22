@@ -86,15 +86,6 @@ No `config.js`, no `themes.js` — everything is compiled directly into `index.h
 
 ---
 
-## Tips
-
-- **Avatar** is embedded as base64 — no external image hosting needed
-- **Multiple YouTube/Twitch channels?** — just add multiple links inside the same section
-- **Additional pages?** — add it in step 4 under Extra Pages, it'll appear in the nav
-- **Updating your site?** — come back to the builder, make changes, download a new zip, replace files in your repo
-
----
-
 ## How To Host The Site Made
 
 - You could buy a domain and upload the code files under pages, for cloudflare etc.
@@ -113,3 +104,15 @@ No `config.js`, no `themes.js` — everything is compiled directly into `index.h
 1. if you bought a domain you should be able to access the domain in your browser. or check DNS, with something like [DNSchecker](https://dnschecker.org/)  
 
 2. if you used github. go back to the main page of the repository and you should see a green tick under the branch nexto your username and the latest commit
+
+---
+
+## Tips
+
+- **Avatar** is embedded as base64 — no external image hosting needed
+- **Multiple YouTube/Twitch channels?** — just add multiple links inside the same section
+- **Additional pages?** — add it in step 4 under Extra Pages, it'll appear in the nav
+- **Updating your site?** — come back to the builder, make changes, download a new zip, replace files in your repo
+
+---
+
