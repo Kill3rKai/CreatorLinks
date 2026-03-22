@@ -10,7 +10,11 @@ A browser-based site builder for creating your own self-hosted links page. Fill 
 
 **1. Open the builder**
 
-Just open `builder.html` in any modern browser (Chrome, Firefox, Edge). Nothing to install.
+```
+git clone https://github.com/Kill3rKai/CreatorLinks.git
+```
+
+open `builder.html` in any browser. Nothing to install.
 
 ```
 creatorlink-builder/
