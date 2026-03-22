@@ -71,21 +71,6 @@ No `config.js`, no `themes.js` — everything is compiled directly into `index.h
 
 ---
 
-## Features built into your exported site
-
-- **9 themes** — 9 themes available to use wen making your site :D
-- **Typing animation** — cycles through your taglines
-- **Avatar ring** — spinning gradient border around your profile image
-- **Featured project bar** — with animated progress fill
-- **Platform hover colours** — Twitch, YouTube, Twitter, Instagram, Discord, Spotify etc all get their own accent colour on hover
-- **Custom cursor** — dot + trailing ring (style varies by theme)
-- **CONNECTION LOST idle screen** — fires after inactivity, with glitch static effect
-- **Easter egg** — type a secret keyword anywhere on the page to get redirected
-- **Auto nav bar** — appears if you added extra pages
-- **Theme gallery** — `themes.html` lets visitors pick their own theme
-
----
-
 ## How To Host The Site Made
 
 - You could buy a domain and upload the code files under pages, for cloudflare etc.
@@ -104,6 +89,21 @@ No `config.js`, no `themes.js` — everything is compiled directly into `index.h
 1. if you bought a domain you should be able to access the domain in your browser. or check DNS, with something like [DNSchecker](https://dnschecker.org/)  
 
 2. if you used github. go back to the main page of the repository and you should see a green tick under the branch nexto your username and the latest commit
+
+---
+
+## Features built into your exported site
+
+- **9 themes** — 9 themes available to use wen making your site :D
+- **Typing animation** — cycles through your taglines
+- **Avatar ring** — spinning gradient border around your profile image
+- **Featured project bar** — with animated progress fill
+- **Platform hover colours** — Twitch, YouTube, Twitter, Instagram, Discord, Spotify etc all get their own accent colour on hover
+- **Custom cursor** — dot + trailing ring (style varies by theme)
+- **CONNECTION LOST idle screen** — fires after inactivity, with glitch static effect
+- **Easter egg** — type a secret keyword anywhere on the page to get redirected
+- **Auto nav bar** — appears if you added extra pages
+- **Theme gallery** — `themes.html` lets visitors pick their own theme
 
 ---
 
