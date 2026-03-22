@@ -92,6 +92,14 @@ No `config.js`, no `themes.js` — everything is compiled directly into `index.h
 
 ---
 
+## Showcase
+
+here is a hyperlink to a very basic site i made, of course you can do much more with it, this is just a template to work on.  
+it is live hosted on github. [Showcase](https://kill3rkai.github.io/CreatorLinksShowcase/)
+
+---
+
+
 ## Features built into your exported site
 
 - **9 themes** — 9 themes available to use wen making your site :D
