@@ -94,3 +94,22 @@ No `config.js`, no `themes.js` — everything is compiled directly into `index.h
 - **Updating your site?** — come back to the builder, make changes, download a new zip, replace files in your repo
 
 ---
+
+## How To Host The Site Made
+
+- You could buy a domain and upload the code files under pages, for cloudflare etc.
+- You could host on github  
+
+### How host on Github
+
+1. Upload files to a repo
+2. got to the repo settings => pages
+3. under "Build and deployment" you can use "Deploy From Branch" or "Github Actions"  ***I tend to use github actions but its usually less work to use Deploy From Branch***
+4. if you used "Deploy From Branch", select main branch, and it should be live in a few minutes
+4. if you used "Github Actions", select "Static HTML" option and then "Commit changes" in the top right of the screen
+
+### Confirming the site is live
+
+1. if you bought a domain you should be able to access the domain in your browser. or check DNS, with something like [DNSchecker](https://dnschecker.org/)  
+
+2. if you used github. go back to the main page of the repository and you should see a green tick under the branch nexto your username and the latest commit
