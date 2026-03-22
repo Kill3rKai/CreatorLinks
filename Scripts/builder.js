@@ -263,8 +263,6 @@ function buildConfigJS() { return buildDataJS(); }
 
 /* ── INDEX.HTML GENERATOR ── */
 function buildIndexHTML() {
-  const themes = document.getElementById('asset-themes').textContent.trim();
-  const appjs  = document.getElementById('asset-appjs').textContent.trim();
   const data   = buildDataJS();
   return `<!DOCTYPE html>
 <html lang="en">
@@ -329,18 +327,16 @@ function buildIndexHTML() {
   </div>
 </div>
 <script>${data}<\/script>
-<script>${themes}<\/script>
-<script>${appjs}<\/script>
+<script src="Scripts/themes.js"></script>
+<script src="Scripts/app.js"></script>
 </body>
 </html>`;
 }
 
 /* ── PREVIEW HTML (self-contained, cursor disabled inside iframe) ── */
-function buildPreviewHTML() {
-  const cfg    = buildConfigJS();
-  const themes = document.getElementById('asset-themes').textContent;
-  const css    = document.getElementById('asset-css').textContent;
-  const appjs  = document.getElementById('asset-appjs').textContent;
+async function buildPreviewHTML() {
+  const cfg = buildConfigJS();
+  const baseHref = new URL('.', location.href).href;
 
   // Inject a flag so app.js knows it's inside the builder preview
   // This disables the custom cursor (pointer-events:none on iframe anyway)
@@ -356,10 +352,12 @@ function buildPreviewHTML() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<base href="${baseHref}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<style>${css}${previewOverride}</style>
+<link rel="stylesheet" href="Styles/styles.css">
+<style>${previewOverride}</style>
 </head>
 <body>
 <div id="cursor"></div><div id="cursorRing"></div>
@@ -395,31 +393,51 @@ function buildPreviewHTML() {
   // Builder preview — force theme from CONFIG, never localStorage
   const PREVIEW_MODE = true;
   try { localStorage.removeItem('cl-theme'); } catch(e) {}
-<\/script>
-<script>${cfg}<\/script>
-<script>${themes}<\/script>
-<script>
-  // Patch: override saved theme lookup so CONFIG.theme always wins in preview
   const _origGet = Storage.prototype.getItem;
   Storage.prototype.getItem = function(k) {
     if (k === 'cl-theme') return CONFIG.theme;
     return _origGet.call(this, k);
   };
 <\/script>
-<script>${appjs}<\/script>
+<script>${cfg}<\/script>
+<script src="Scripts/themes.js"></script>
+<script src="Scripts/app.js"></script>
 </body></html>`;
 }
 
 /* ── LIVE PREVIEW ── */
 let previewTimer = null;
-function updatePreview() {
+async function updatePreview() {
   readForm();
   clearTimeout(previewTimer);
-  previewTimer = setTimeout(() => {
+  previewTimer = setTimeout(async () => {
     const frame = document.getElementById('preview-frame');
-    const html  = buildPreviewHTML();
+    const html  = await buildPreviewHTML();
     frame.srcdoc = html;
   }, 700);
+}
+
+/* ── RESOURCE LOADER (file:// fallback) ── */
+async function loadAsset(path) {
+  const url = new URL(path, location.href).href;
+
+  try {
+    const res = await fetch(url);
+    if (res.ok) return await res.text();
+    throw new Error('Fetch status ' + res.status);
+  } catch (fetchErr) {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.overrideMimeType('text/plain');
+      xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) resolve(xhr.responseText);
+        else reject(new Error('XHR status ' + xhr.status));
+      };
+      xhr.onerror = function () { reject(fetchErr); };
+      xhr.send();
+    });
+  }
 }
 
 /* ── PREVIEW MODE TOGGLE ── */
@@ -445,8 +463,8 @@ async function exportZip() {
     root.file('index.html',   buildIndexHTML());
     root.file('themes.html',  buildThemesHTML());
     root.file('README.md',    buildReadme());
-    scripts.file('app.js',    document.getElementById('asset-appjs').textContent.trim());
-    styles.file('styles.css', document.getElementById('asset-css').textContent.trim());
+    scripts.file('app.js',    await loadAsset('Scripts/app.js'));
+    styles.file('styles.css', await loadAsset('Styles/styles.css'));
 
     const blob = await zip.generateAsync({ type:'blob', compression:'DEFLATE' });
     const a = document.createElement('a');
