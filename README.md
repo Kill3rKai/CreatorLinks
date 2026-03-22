@@ -102,7 +102,7 @@ it is live hosted on github. [Showcase](https://kill3rkai.github.io/CreatorLinks
 
 ## Features built into your exported site
 
-- **9 themes** — 9 themes available to use wen making your site :D
+- **8 themes** — 8 themes available to use wen making your site :D
 - **Typing animation** — cycles through your taglines
 - **Avatar ring** — spinning gradient border around your profile image
 - **Featured project bar** — with animated progress fill
