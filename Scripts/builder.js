@@ -545,8 +545,7 @@ async function exportZip() {
     const finalIndexHtml = await buildPreviewHTML();
     root.file('index.html', finalIndexHtml);
 
-    console.log('Building themes.html...');
-    root.file('themes.html',  buildThemesHTML());
+    // Removed themes.html from export per request.
     console.log('Building README.md...');
     root.file('README.md',    buildReadme());
 
