@@ -21,12 +21,18 @@ or download this repo by clicking on the "Code" button on the top right above co
 or if you're lazy... heres a live server... [CreatorLinks]()
 
 ```
-creatorlink-builder/
-├── builder.html          ← open this
-├── Scripts/
-│   └── builder.js
-└── Styles/
-    └── builder.css
+creatorlinks/
+│   builder.html          ← open this
+│   README.md
+│
+├───Scripts/
+│       builder.js        ← builder logic
+│       app.js            ← site page engine (baked into exported zip)
+│       themes.js         ← theme definitions (baked into exported zip)
+│
+└───Styles/
+        builder.css       ← builder UI styles
+        styles.css        ← site styles (baked into exported zip)
 ```
 
 **2. Fill in your details — 4 steps**
@@ -43,6 +49,8 @@ The **live preview** on the right updates as you type — phone and desktop view
 **3. Download your site**
 
 Hit **Download ZIP** on step 4. You get a `creatorlink.zip` containing your complete site, ready to host.
+
+when you get this file **Unblock it** by going into propeties and ticking unblock and then apply.
 
 ---
 
