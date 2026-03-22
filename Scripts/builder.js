@@ -362,6 +362,11 @@ function buildIndexHTML() {
     <button class="theme-opt" data-theme="minimal">Minimal</button>
     <button class="theme-opt" data-theme="terminal">Terminal</button>
     <button class="theme-opt" data-theme="soft">Soft</button>
+    <button class="theme-opt" data-theme="sakura">Sakura</button>
+    <button class="theme-opt" data-theme="sunset">Sunset</button>
+    <button class="theme-opt" data-theme="ocean">Ocean</button>
+    <button class="theme-opt" data-theme="void">Void</button>
+    <button class="theme-opt" data-theme="gold">Gold</button>
     <a class="theme-opt" href="themes.html" style="text-decoration:none;display:block;text-align:center">Theme Gallery</a>
   </div>
 </div>
@@ -1542,6 +1547,46 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
       </div>
       <div class="foot" style="background:#0a0812"><div><div class="fn" style="color:#c89aff;font-family:sans-serif">Soft</div><div class="fd">Purple · Pastel · Aesthetic</div></div><button class="sb" id="b-soft">SELECT</button></div>
     </div>
+    <div class="card" data-theme="sakura" style="--ca:#ff6eb4;background:#0f0509" onclick="sel('sakura')">
+      <div class="preview" style="background:linear-gradient(135deg,#0f0509,#1a0812)">
+        <div class="av" style="background:#1a0812;color:#ff6eb4;font-family:sans-serif">KK</div>
+        <div class="pname" style="color:#ffe8f4;font-family:sans-serif;letter-spacing:1px">YOURNAME</div><div class="phandle" style="color:#ff6eb4">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(255,110,180,.05);color:#ffe8f4;font-family:sans-serif">Twitch</div><div class="pl" style="background:rgba(255,110,180,.05);color:#ffe8f4;font-family:sans-serif">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#0a0307"><div><div class="fn" style="color:#ff6eb4;font-family:sans-serif">Sakura</div><div class="fd">Pink · Soft · Glowy</div></div><button class="sb" id="b-sakura">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="sunset" style="--ca:#ff7c2a;background:#0d0805" onclick="sel('sunset')">
+      <div class="preview" style="background:linear-gradient(135deg,#0d0805,#1a0f08)">
+        <div class="av" style="background:#1a1008;color:#ff7c2a">KK</div>
+        <div class="pname" style="color:#fff0e0;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#ff7c2a">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(255,124,42,.05);color:#fff0e0">Twitch</div><div class="pl" style="background:rgba(255,124,42,.05);color:#fff0e0">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#0a0603"><div><div class="fn" style="color:#ff7c2a">SUNSET</div><div class="fd">Warm · Amber · Retro</div></div><button class="sb" id="b-sunset">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="ocean" style="--ca:#00d4b4;background:#020d12" onclick="sel('ocean')">
+      <div class="preview" style="background:linear-gradient(135deg,#020d12,#041820);background-image:linear-gradient(rgba(0,210,180,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,210,180,.04) 1px,transparent 1px);background-size:20px 20px">
+        <div class="av" style="background:#041820;color:#00d4b4">KK</div>
+        <div class="pname" style="color:#d0f4f0;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#00d4b4">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(0,212,180,.05);color:#d0f4f0">Twitch</div><div class="pl" style="background:rgba(0,212,180,.05);color:#d0f4f0">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#010a0e"><div><div class="fn" style="color:#00d4b4">OCEAN</div><div class="fd">Teal · Deep · Calm</div></div><button class="sb" id="b-ocean">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="void" style="--ca:#444;background:#000" onclick="sel('void')">
+      <div class="preview" style="background:#000">
+        <div class="av" style="background:#111;color:#666;font-family:sans-serif">KK</div>
+        <div class="pname" style="color:#aaa;font-family:sans-serif;letter-spacing:1px">YOURNAME</div><div class="phandle" style="color:#555">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(255,255,255,.03);color:#aaa;font-family:sans-serif">Twitch</div><div class="pl" style="background:rgba(255,255,255,.03);color:#aaa;font-family:sans-serif">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#050505"><div><div class="fn" style="color:#666;font-family:sans-serif">Void</div><div class="fd">Black · Silent · Raw</div></div><button class="sb" id="b-void">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="gold" style="--ca:#d4af37;background:#080600" onclick="sel('gold')">
+      <div class="preview" style="background:linear-gradient(135deg,#080600,#120e00)">
+        <div class="av" style="background:#120e00;color:#d4af37">KK</div>
+        <div class="pname" style="color:#fff8e0;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#d4af37">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(212,175,55,.05);color:#fff8e0">Twitch</div><div class="pl" style="background:rgba(212,175,55,.05);color:#fff8e0">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#060400"><div><div class="fn" style="color:#d4af37">GOLD</div><div class="fd">Luxury · Rich · Bold</div></div><button class="sb" id="b-gold">SELECT</button></div>
+    </div>
   </div>
   <div class="cta">
     <div class="cur">CURRENT: <span id="ct">CYBER</span></div><br>
@@ -1549,7 +1594,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
   </div>
 </div>
 <script>
-const L={cyber:'CYBER',minimal:'MINIMAL',terminal:'TERMINAL',soft:'SOFT'};
+const L={cyber:'CYBER',minimal:'MINIMAL',terminal:'TERMINAL',soft:'SOFT',sakura:'SAKURA',sunset:'SUNSET',ocean:'OCEAN',void:'VOID',gold:'GOLD'};
 function sel(n){localStorage.setItem('cl-theme',n);document.querySelectorAll('.sb').forEach(b=>{b.textContent='SELECT';b.classList.remove('act')});document.querySelectorAll('.card').forEach(c=>{c.classList.toggle('sel',c.dataset.theme===n)});const b=document.getElementById('b-'+n);if(b){b.textContent='SELECTED';b.classList.add('act')}document.getElementById('ct').textContent=L[n]||n.toUpperCase()}
 window.addEventListener('DOMContentLoaded',()=>sel(localStorage.getItem('cl-theme')||'cyber'));
 <\/script>
