@@ -418,11 +418,7 @@ function updatePreview() {
   previewTimer = setTimeout(() => {
     const frame = document.getElementById('preview-frame');
     const html  = buildPreviewHTML();
-    const blob  = new Blob([html], { type: 'text/html' });
-    const url   = URL.createObjectURL(blob);
-    const old   = frame.src;
-    frame.src   = url;
-    if (old && old.startsWith('blob:')) URL.revokeObjectURL(old);
+    frame.srcdoc = html;
   }, 700);
 }
 
