@@ -1,6 +1,6 @@
 # CreatorLink Builder
 
-A browser-based site builder for creating your own self-hosted links page. Fill in your details, pick a theme, add your links, and download a ready-to-host zip — no account, no server, no npm.
+A browser-based site builder for creating your own self-hosted links page. Fill in your details, pick a theme, add your links, and download a ready-to-host zip
 
 > Built by [Kill3rKai](https://kill3rkai.ai)
 
