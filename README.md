@@ -8,9 +8,7 @@ A browser-based site builder for creating your own self-hosted links page. Fill 
 
 ## How to use
 
-**1. Open the builder**
-
-Just open `builder.html` in any browser. Nothing to install other than this git repo
+### Download
 
 ```
 git clone https://github.com/Kill3rKai/CreatorLinks.git
@@ -18,7 +16,9 @@ git clone https://github.com/Kill3rKai/CreatorLinks.git
 
 or download this repo by clicking on the "Code" button on the top right above commits
 
-or if you're lazy... heres a live server... [CreatorLinks](https://kill3rkai.github.io/CreatorLinks/)
+or if you're lazy... heres a live server... [CreatorLinks](https://kill3rkai.github.io/CreatorLinks/)  
+
+Just open `builder.html` in any browser. Nothing to install other than this git repo
 
 ```
 creatorlinks/
