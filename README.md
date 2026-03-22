@@ -73,7 +73,7 @@ No `config.js`, no `themes.js` — everything is compiled directly into `index.h
 
 ## Features built into your exported site
 
-- **4 themes** — Cyber, Minimal, Terminal, Soft. Switchable live from a palette button
+- **9 themes** — 9 themes available to use wen making your site :D
 - **Typing animation** — cycles through your taglines
 - **Avatar ring** — spinning gradient border around your profile image
 - **Featured project bar** — with animated progress fill
