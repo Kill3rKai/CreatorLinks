@@ -367,6 +367,12 @@ function buildIndexHTML() {
     <button class="theme-opt" data-theme="ocean">Ocean</button>
     <button class="theme-opt" data-theme="void">Void</button>
     <button class="theme-opt" data-theme="gold">Gold</button>
+    <button class="theme-opt" data-theme="neon">Neon</button>
+    <button class="theme-opt" data-theme="blood">Blood</button>
+    <button class="theme-opt" data-theme="midnight">Midnight</button>
+    <button class="theme-opt" data-theme="forest">Forest</button>
+    <button class="theme-opt" data-theme="retro">Retro</button>
+    <button class="theme-opt" data-theme="arctic">Arctic</button>
     <a class="theme-opt" href="themes.html" style="text-decoration:none;display:block;text-align:center">Theme Gallery</a>
   </div>
 </div>
@@ -1587,6 +1593,54 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
       </div>
       <div class="foot" style="background:#060400"><div><div class="fn" style="color:#d4af37">GOLD</div><div class="fd">Luxury · Rich · Bold</div></div><button class="sb" id="b-gold">SELECT</button></div>
     </div>
+    <div class="card" data-theme="neon" style="--ca:#ff00cc;background:#0a0010" onclick="sel('neon')">
+      <div class="preview" style="background:linear-gradient(135deg,#0a0010,#1a0028);background-image:linear-gradient(rgba(255,0,200,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,0,200,.04) 1px,transparent 1px);background-size:20px 20px">
+        <div class="av" style="background:#1a0028;color:#ff00cc">KK</div>
+        <div class="pname" style="color:#ffe8ff;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#ff00cc">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(255,0,200,.05);color:#ffe8ff">Twitch</div><div class="pl" style="background:rgba(255,0,200,.05);color:#ffe8ff">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#080010"><div><div class="fn" style="color:#ff00cc">NEON</div><div class="fd">Magenta · Grid · Streamer</div></div><button class="sb" id="b-neon">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="blood" style="--ca:#cc0020;background:#080003" onclick="sel('blood')">
+      <div class="preview" style="background:linear-gradient(135deg,#080003,#150008)">
+        <div class="av" style="background:#1a0008;color:#cc0020">KK</div>
+        <div class="pname" style="color:#ffe8e8;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#cc0020">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(200,0,30,.05);color:#ffe8e8">Twitch</div><div class="pl" style="background:rgba(200,0,30,.05);color:#ffe8e8">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#060002"><div><div class="fn" style="color:#cc0020">BLOOD</div><div class="fd">Crimson · Dark · Horror</div></div><button class="sb" id="b-blood">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="midnight" style="--ca:#5b7fff;background:#03050f" onclick="sel('midnight')">
+      <div class="preview" style="background:linear-gradient(135deg,#03050f,#080c20)">
+        <div class="av" style="background:#0c1028;color:#5b7fff;font-family:sans-serif">KK</div>
+        <div class="pname" style="color:#e8ecff;font-family:sans-serif;letter-spacing:1px">YOURNAME</div><div class="phandle" style="color:#5b7fff">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(80,100,255,.06);color:#e8ecff;font-family:sans-serif">Twitch</div><div class="pl" style="background:rgba(80,100,255,.06);color:#e8ecff;font-family:sans-serif">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#02040c"><div><div class="fn" style="color:#5b7fff;font-family:sans-serif">Midnight</div><div class="fd">Blue · Indigo · Music</div></div><button class="sb" id="b-midnight">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="forest" style="--ca:#2aaa4a;background:#020a04" onclick="sel('forest')">
+      <div class="preview" style="background:linear-gradient(135deg,#020a04,#051408)">
+        <div class="av" style="background:#081a0c;color:#2aaa4a">KK</div>
+        <div class="pname" style="color:#d8f0d8;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#2aaa4a">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(42,170,74,.05);color:#d8f0d8">Twitch</div><div class="pl" style="background:rgba(42,170,74,.05);color:#d8f0d8">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#010802"><div><div class="fn" style="color:#2aaa4a">FOREST</div><div class="fd">Green · Nature · Chill</div></div><button class="sb" id="b-forest">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="retro" style="--ca:#e8a020;background:#0e0800" onclick="sel('retro')">
+      <div class="preview" style="background:linear-gradient(135deg,#0e0800,#1c1000);background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.15) 2px,rgba(0,0,0,.15) 4px)">
+        <div class="av" style="background:#1c1000;color:#e8a020">KK</div>
+        <div class="pname" style="color:#fff4d0;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#e8a020">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(232,160,32,.05);color:#fff4d0">Twitch</div><div class="pl" style="background:rgba(232,160,32,.05);color:#fff4d0">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#0a0600"><div><div class="fn" style="color:#e8a020">RETRO</div><div class="fd">80s · VHS · Warm</div></div><button class="sb" id="b-retro">SELECT</button></div>
+    </div>
+    <div class="card" data-theme="arctic" style="--ca:#a8d8ff;background:#04080f" onclick="sel('arctic')">
+      <div class="preview" style="background:linear-gradient(135deg,#04080f,#081018)">
+        <div class="av" style="background:#0c1828;color:#a8d8ff">KK</div>
+        <div class="pname" style="color:#eef6ff;letter-spacing:2px">YOURNAME</div><div class="phandle" style="color:#a8d8ff">@handle</div>
+        <div class="plinks"><div class="pl" style="background:rgba(168,216,255,.05);color:#eef6ff">Twitch</div><div class="pl" style="background:rgba(168,216,255,.05);color:#eef6ff">YouTube</div></div>
+      </div>
+      <div class="foot" style="background:#03060c"><div><div class="fn" style="color:#a8d8ff">ARCTIC</div><div class="fd">Ice · Silver · Esports</div></div><button class="sb" id="b-arctic">SELECT</button></div>
+    </div>
   </div>
   <div class="cta">
     <div class="cur">CURRENT: <span id="ct">CYBER</span></div><br>
@@ -1594,7 +1648,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
   </div>
 </div>
 <script>
-const L={cyber:'CYBER',minimal:'MINIMAL',terminal:'TERMINAL',soft:'SOFT',sakura:'SAKURA',sunset:'SUNSET',ocean:'OCEAN',void:'VOID',gold:'GOLD'};
+const L={cyber:'CYBER',minimal:'MINIMAL',terminal:'TERMINAL',soft:'SOFT',sakura:'SAKURA',sunset:'SUNSET',ocean:'OCEAN',void:'VOID',gold:'GOLD',neon:'NEON',blood:'BLOOD',midnight:'MIDNIGHT',forest:'FOREST',retro:'RETRO',arctic:'ARCTIC'};
 function sel(n){localStorage.setItem('cl-theme',n);document.querySelectorAll('.sb').forEach(b=>{b.textContent='SELECT';b.classList.remove('act')});document.querySelectorAll('.card').forEach(c=>{c.classList.toggle('sel',c.dataset.theme===n)});const b=document.getElementById('b-'+n);if(b){b.textContent='SELECTED';b.classList.add('act')}document.getElementById('ct').textContent=L[n]||n.toUpperCase()}
 window.addEventListener('DOMContentLoaded',()=>sel(localStorage.getItem('cl-theme')||'cyber'));
 <\/script>
