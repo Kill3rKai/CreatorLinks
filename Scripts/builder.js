@@ -1493,7 +1493,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .back:hover{color:#00c8ff;border-color:rgba(0,200,255,.35)}
 .title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,6vw,3.6rem);letter-spacing:4px;background:linear-gradient(135deg,#fff 30%,#00c8ff 70%,#a259ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sub{font-size:10px;letter-spacing:2px;color:#4a7a9b;margin-top:8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,220px));gap:16px;justify-content:center}
 .card{border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,.08);cursor:pointer;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-4px)}
 .card.sel{outline:2px solid var(--ca);outline-offset:2px}
